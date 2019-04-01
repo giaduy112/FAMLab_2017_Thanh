@@ -1,6 +1,6 @@
 /*
  Fragments Automatic Matching Laboratory (FAMLab)
- Copyright (C) 2016  Pham Xuan Thanh (xuan-thanh.pham@etu.u-bordeaux.fr)
+ Copyright (C) 2017  Pham Xuan Thanh (xuan-thanh.pham@etu.u-bordeaux.fr)
  Version: 1.1
  Created on: December, 2017
 
