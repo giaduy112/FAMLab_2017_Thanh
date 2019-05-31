@@ -20,6 +20,7 @@
 #ifndef IMAGE_H_
 #define IMAGE_H_
 #include "Edge.h"
+#include "Matrix.h"
 class Image
 {
 private:

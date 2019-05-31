@@ -36,7 +36,6 @@ using namespace std;
 #include "Point.h"
 #include "Line.h"
 
-
 bool checkPointInList(std::vector<Point>, Point);
 class Edge
 {

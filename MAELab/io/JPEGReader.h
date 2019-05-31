@@ -19,6 +19,9 @@
 
 #ifndef JPEGREADER_H_
 #define JPEGREADER_H_
+
+#include "../imageModel/Matrix.h"
+
 ptr_RGBMatrix decompressJPEG(const char* filename, int &rows, int &cols);
 void RGB2JPEG(const char* filename, ptr_RGBMatrix rgbMatrix);
 void Gray2JPEG(const char* filename, ptr_IntMatrix grayMatrix);

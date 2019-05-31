@@ -24,10 +24,10 @@
 
 #include <cmath>
 #include <vector>
-using namespace std;
+#include <Point.h>
+#include <Edge.h>
 
-#include "MAELab/imageModel/Point.h"
-#include "MAELab/imageModel/Edge.h"
+using namespace std;
 
 vector<vector<int> > cumulativeDistanceMatrix(vector<int> vectorX, vector<int> vectorY);
 vector< pair<int,int> > optimalWarpingPath(vector< vector<int> > dtw);

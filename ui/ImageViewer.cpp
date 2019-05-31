@@ -43,7 +43,7 @@ ImageViewer::ImageViewer()
     setWindowTitle(tr(".: Image viewer :."));
     resize(900, 700);
 
-    setWindowIcon(QIcon("./resources/ico/ip.ico"));
+    setWindowIcon(QIcon(":/resources/ico/ip.ico"));
 
     connect(this->imageLabel,SIGNAL(sendMouseLocation(int,int)),this,SLOT(extractObject(int,int)));
 }
@@ -66,7 +66,7 @@ ImageViewer::~ImageViewer()
 
 void ImageViewer::createFileMenu()
 {
-    openAct = new QAction(QIcon("./resources/ico/open.png"), tr("&Open..."),
+    openAct = new QAction(QIcon(":/resources/ico/open.png"), tr("&Open..."),
                           this);
     openAct->setShortcuts(QKeySequence::Open);
     openAct->setStatusTip(tr("Open an existing file"));

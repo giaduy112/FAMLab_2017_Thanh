@@ -20,7 +20,7 @@
 #ifndef IMAGECONVERT_H_
 #define IMAGECONVERT_H_
 
-#include <QtGui/qimage.h>
+#include <QtWidgets>
 QImage ptrIntToQImage(ptr_IntMatrix inputMatrix);
 QImage ptrRGBToQImage(ptr_RGBMatrix inputMatrix);
 //Thanh

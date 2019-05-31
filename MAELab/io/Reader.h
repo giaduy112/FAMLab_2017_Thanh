@@ -20,9 +20,11 @@
 #ifndef READER_H_
 #define READER_H_
 
+#include "../imageModel/Matrix.h"
+
 ptr_RGBMatrix readJPGToRGB(const char* filename,int &rows, int &cols);
 void saveRGB(const char* filename, ptr_RGBMatrix rgbMatrix);
 void saveGrayScale(const char* filename, ptr_IntMatrix grayMatrix);
-vector<Point> readTPSFile(const char* filename);
-vector<string> readDirectory(const char* dirPath);
+std::vector<Point> readTPSFile(const char* filename);
+std::vector<string> readDirectory(const char* dirPath);
 #endif /* READER_H_ */

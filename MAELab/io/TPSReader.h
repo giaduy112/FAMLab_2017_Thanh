@@ -20,6 +20,10 @@
 #ifndef TPSREADER_H_
 #define TPSREADER_H_
 
+#include <vector>
+#include <string>
+#include "../imageModel/Point.h"
+
 std::vector<Point> readTPS(const char* filename);
 std::vector<Point> readTPSWithDifference(const char* filename, string &difference);
 #endif /* TPSREADER_H_ */

@@ -33,7 +33,7 @@ WindowFragments::WindowFragments()
     leftFragment = new FragmentItem;
     rightFragment = new FragmentItem;
 
-    setWindowIcon(QIcon("./resources/ico/FAMLab.png"));
+    setWindowIcon(QIcon(":/resources/ico/FAMLab.png"));
 
     connect(this->imageViewer,SIGNAL(sendObjectRGBA(string,int,int,ptrRGBAMatrix,Edge)),this,SLOT(loadObject(string,int,int,ptrRGBAMatrix,Edge)));
 
@@ -292,7 +292,7 @@ void WindowFragments::createActions()
 
 void WindowFragments::createFileMenuActions()
 {
-    openAction = new QAction(QIcon("./resources/ico/open.png"), tr("&Open..."), this);
+    openAction = new QAction(QIcon(":/resources/ico/open.png"), tr("&Open..."), this);
     openAction->setShortcuts(QKeySequence::Open);
     openAction->setStatusTip(tr("Open an existing file"));
     connect(openAction, SIGNAL(triggered()), this, SLOT(open()));
@@ -305,47 +305,47 @@ void WindowFragments::createFileMenuActions()
 
 void WindowFragments::createFragmentMenuActions()
 {
-    deleteAction = new QAction(QIcon("./resources/ico/delete.png"), tr("&Delete"), this);
+    deleteAction = new QAction(QIcon(":/resources/ico/delete.png"), tr("&Delete"), this);
     deleteAction->setShortcut(tr("Delete"));
     deleteAction->setStatusTip(tr("Delete item from screen"));
     connect(deleteAction, SIGNAL(triggered()), this, SLOT(deleteItem()));
 
-    toFrontAction = new QAction(QIcon("./resources/ico/bringtofront.png"), tr("Bring to &Front"), this);
+    toFrontAction = new QAction(QIcon(":/resources/ico/bringtofront.png"), tr("Bring to &Front"), this);
     toFrontAction->setShortcut(tr("Ctrl+F"));
     toFrontAction->setStatusTip(tr("Bring item to front"));
     connect(toFrontAction, SIGNAL(triggered()), this, SLOT(bringToFront()));
 
-    sendBackAction = new QAction(QIcon("./resources/ico/sendtoback.png"), tr("Send to &Back"), this);
+    sendBackAction = new QAction(QIcon(":/resources/ico/sendtoback.png"), tr("Send to &Back"), this);
     sendBackAction->setShortcut(tr("Ctrl+B"));
     sendBackAction->setStatusTip(tr("Send item to back"));
     connect(sendBackAction, SIGNAL(triggered()), this, SLOT(sendToBack()));
 
-    rotateLeftAction = new QAction(QIcon("./resources/ico/rotateleft.png"), tr("Rotate &Left"), this);
+    rotateLeftAction = new QAction(QIcon(":/resources/ico/rotateleft.png"), tr("Rotate &Left"), this);
     rotateLeftAction->setShortcut(tr("Ctrl+L"));
     rotateLeftAction->setStatusTip(tr("Rotate left"));
     connect(rotateLeftAction, SIGNAL(triggered()), this, SLOT(rotateleft()));
 
-    rotateRightAction = new QAction(QIcon("./resources/ico/rotateright.png"), tr("Rotate &Right"), this);
+    rotateRightAction = new QAction(QIcon(":/resources/ico/rotateright.png"), tr("Rotate &Right"), this);
     rotateRightAction->setShortcut(tr("Ctrl+R"));
     rotateRightAction->setStatusTip(tr("Rotate Right"));
     connect(rotateRightAction, SIGNAL(triggered()), this, SLOT(rotateright()));
 
-    setLeftFragmentAction = new QAction(QIcon("./resources/ico/rotateright.png"), tr("Set the left fragment"), this);
+    setLeftFragmentAction = new QAction(QIcon(":/resources/ico/rotateright.png"), tr("Set the left fragment"), this);
     setLeftFragmentAction->setStatusTip(tr("Set the left fragment"));
     connect(setLeftFragmentAction, SIGNAL(triggered()), this, SLOT(setLeftFragment()));
 
-    setRightFragmentAction = new QAction(QIcon("./resources/ico/rotateright.png"), tr("Set the right fragment"), this);
+    setRightFragmentAction = new QAction(QIcon(":/resources/ico/rotateright.png"), tr("Set the right fragment"), this);
     setRightFragmentAction->setStatusTip(tr("Set the right fragment"));
     connect(setRightFragmentAction, SIGNAL(triggered()), this, SLOT(setRightFragment()));
 
-    propertyAction = new QAction(QIcon("./resources/ico/Information.png"), tr("&Property"), this);
+    propertyAction = new QAction(QIcon(":/resources/ico/Information.png"), tr("&Property"), this);
     propertyAction->setStatusTip(tr("Information of fragment"));
     connect(propertyAction, SIGNAL(triggered()), this, SLOT(propertyItem()));
 }
 
 void WindowFragments::createMatchingMenuActions()
 {
-    suggestDTWAction = new QAction(QIcon("./resources/ico/matching.png"), tr("suggest matching by DTW"), this);
+    suggestDTWAction = new QAction(QIcon(":/resources/ico/matching.png"), tr("suggest matching by DTW"), this);
     suggestDTWAction->setStatusTip(tr("suggest matching by DTW"));
     connect(suggestDTWAction, SIGNAL(triggered()), this, SLOT(suggestDTW()));
 }

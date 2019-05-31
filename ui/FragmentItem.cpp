@@ -26,7 +26,7 @@ FragmentItem::FragmentItem()
 }
 
 FragmentItem::FragmentItem(string name, int locationX, int locationY, Edge border, ptrRGBAMatrix objectRGBAMatrix, const QPixmap &pixmap, QMenu *contextMenu, QGraphicsItem *parent, QGraphicsScene *scene)
-    : QGraphicsPixmapItem(pixmap, parent, scene)
+    : QGraphicsPixmapItem(pixmap, parent)
 {
     this->name = name;
     this->imageX = locationX;
@@ -35,6 +35,7 @@ FragmentItem::FragmentItem(string name, int locationX, int locationY, Edge borde
     this->objectRGBAMatrix = objectRGBAMatrix;
     this->myContextMenu = contextMenu;
     setFlags(QGraphicsItem::ItemIsMovable | QGraphicsItem::ItemIsSelectable | QGraphicsItem::ItemSendsScenePositionChanges);
+    scene->addItem(this);
 }
 
 FragmentItem::~FragmentItem()
